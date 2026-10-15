@@ -1,0 +1,129 @@
+.page {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 36px 56px 80px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 380px) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+  margin-top: 28px;
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 585 / 758;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: #d5d5d5;
+}
+
+.photo img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.title {
+  margin-bottom: 22px;
+  color: #ffffff;
+  font-size: clamp(2rem, 4.4vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.copy p {
+  color: #ececec;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+  min-height: 230px;
+  padding: 22px 22px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+}
+
+.fact h2 {
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+
+.fact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+  color: #dedede;
+  font-size: 15px;
+}
+
+.school,
+.program {
+  color: #dedede;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.year {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 24px;
+  color: #d5d5d5;
+  font-size: 15px;
+}
+
+@media (max-width: 800px) {
+  .page {
+    padding: 16px 16px 56px;
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+
+  .layout,
+  .facts {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .photo {
+    width: min(100%, 420px);
+    margin-inline: auto;
+  }
+
+  .copy p,
+  .fact ul,
+  .school,
+  .program,
+  .year {
+    font-size: 16px;
+  }
+
+  .fact {
+    min-height: 0;
+  }
+}

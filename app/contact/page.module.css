@@ -1,0 +1,105 @@
+.page {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 36px 56px 80px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 420px) minmax(0, 640px);
+  gap: 72px;
+  align-items: start;
+  margin-top: 36px;
+}
+
+.title {
+  margin-bottom: 36px;
+  color: #ffffff;
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
+}
+
+.block + .block {
+  margin-top: 28px;
+}
+
+.label {
+  margin-bottom: 8px;
+  color: #c8c8c8;
+  font-size: 15px;
+}
+
+.value {
+  color: #ffffff;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  overflow-wrap: anywhere;
+}
+
+.value:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.social {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.instagram,
+.facebook {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 12px;
+}
+
+.instagram {
+  background: radial-gradient(circle at 30% 30%, #f7d15b, #e1306c 45%, #833ab4);
+}
+
+.facebook {
+  border-radius: 50%;
+  background: #1877f2;
+}
+
+.instagram svg,
+.facebook svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 800px) {
+  .page {
+    padding: 16px 16px 56px;
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 24px;
+  }
+
+  .title {
+    margin-bottom: 24px;
+  }
+
+  .value {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .instagram,
+  .facebook {
+    width: 44px;
+    height: 44px;
+  }
+}
