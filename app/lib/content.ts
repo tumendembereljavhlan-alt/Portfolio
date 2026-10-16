@@ -25,12 +25,14 @@ export const content = {
       tags: "E-commerce · Marketing",
       image: "/images/khalx-laptop.jpg",
       alt: "Laptop showing the KHALX online store",
+      url: "https://www.khalx.store/mn",
     },
     {
       name: "NEORIX - Education",
       tags: "Analyze exam · Learn",
       image: "/images/neorix-laptop.jpg",
       alt: "Laptop showing the NEORIX education product",
+      url: "https://edudiag-mn-beryl.vercel.app/",
     },
   ],
   skills: [

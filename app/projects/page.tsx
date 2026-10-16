@@ -30,9 +30,18 @@ export default function ProjectsPage() {
                 <h2>{project.name}</h2>
                 <p>{project.tags}</p>
               </div>
-              <span className={styles.arrow} aria-hidden="true">
-                →
-              </span>
+              <a
+                className={styles.demo}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Live Demo: ${project.name}`}
+              >
+                Live Demo
+                <span className={styles.arrow} aria-hidden="true">
+                  ↗
+                </span>
+              </a>
             </div>
           </article>
         ))}

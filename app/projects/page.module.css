@@ -62,9 +62,29 @@
   font-size: 14px;
 }
 
+.demo {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 2px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.demo:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .arrow {
   color: #ffffff;
-  font-size: 22px;
+  font-size: 16px;
+  line-height: 1;
 }
 
 @media (max-width: 800px) {
